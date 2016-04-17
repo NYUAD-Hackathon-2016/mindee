@@ -1,0 +1,72 @@
+{% extends "mindee/layout.html" %}
+{% block body %}
+
+
+   <div class="form">
+      <ul class="tab-group">
+         <li class="tab active"><a href="#signup">Progress</a></li>
+         <li class="tab"><a href="#login">Things to work On</a></li>
+      </ul>
+      <div class="tab-content">
+         <div id="signup" width="40%">
+            <h1>Progress</h1>
+            <div>
+               <div id="sleep" style="text-align: center;color:white;">Sleep</div>
+               <div id="stress" style="text-align: center;color:white;">Stress</div>
+            </div>
+         </div>
+         <div id="login">
+            <h1>Things to Work ON</h1>
+            <a href="/sleep"><img src="{{ url_for('static', filename='sleeping.png') }}"></a>
+            <img src="{{ url_for('static', filename='Exercise.png') }}">
+            <img src="{{ url_for('static', filename='SocialLife.png') }}">
+            <img src="{{ url_for('static', filename='Stress.png') }}">
+         </div>
+      </div>
+      <!-- tab-content -->
+   </div>
+   <script type="text/javascript">
+
+var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", url, true);
+    xhr.responseType = "text";
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status == 200) {
+        callback(null, xhr.responseText);
+      } else {
+        callback(status);
+      }
+    };
+    xhr.send();
+};
+   function  yoga(err, data) {
+  if (err != null) {
+    alert("Something went wrong: " + err);
+  } else {
+   //alert(data);
+    var val = JSON.parse(data);
+   for (var i in val) {
+      //console.log(val[i].id);
+      var bar = new ProgressBar.Circle("#"+val[i].username, {
+        strokeWidth: 6,
+        easing: 'easeInOut',
+        duration: 1400,
+        color: '#FFEA82',
+        trailColor: '#eee',
+        trailWidth: 1,
+        svgStyle: null,
+
+
+    });
+    
+    
+    bar.animate((val[i].age)/100);
+   }
+  }
+};
+
+getJSON("http://127.0.0.1:5000/user", yoga);
+   </script>
+{% endblock %}

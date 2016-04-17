@@ -1,0 +1,107 @@
+{% extends "mindee/layout.html" %}
+{% block body %}
+
+      <div class="form">
+         <div class="tab-content">
+            <form action="/persogoal" method="get" >
+​              <h1>Sleep Survey</h1>
+               
+               <div class="radio question" id="1">
+                  <h3>To what extent has your poor sleep troubled you in general? </h3>
+                  <div class="radio"><label  >
+                  <input type="radio" name="" class="" value="day"> Not at all
+                  </label> </div>
+                  <div class="radio"><label >
+                  <input type="radio" name="" class="" value="week"> A little
+                  </label> </div>
+                  <div class="radio"><label >
+                  <input type="radio" name="" class="" value="month"> Much
+                  </label> </div>
+                  <button type='button' onclick="nextQ(1)">Next</button>
+               </div>
+​
+​
+               
+               <div class="radio question" id="2" style="display:none;">
+                  <h3>Have you had any of the following problems with your sleep?</h3>
+                   <div class="radio" ><label  >
+                  <input type="radio" name="" class="" value="day"> Difficulty getting to sleep
+                  </label></div>
+                   <div class="radio" ><label >
+                  <input type="radio" name="" class="" value="week"> Walking up in the middle of the night
+                  </label></div>
+                   <div class="radio" ><label >
+                  <input type="radio" name="" class="" value="month"> Feeling tired and unrested in the morning
+                  </label></div>
+                   <div class="radio" ><label >
+                  <input type="radio" name="" class="" value="month"> Waking up too early
+                  </label></div>
+                   <div class="radio" ><label >
+                  <input type="radio" name="" class="" value="month"> None of the above
+                  </label></div>
+                  <button type='button' onclick="nextQ(2)">Next</button>
+               </div>
+               
+               <div class="radio question" id="3" style="display:none;">
+                  <h3>How many nights a week do you have a problem with your sleep?</h3>
+                   <div class="radio" ><label  >
+                  <input type="radio" name="" class="" value="day"> 0 nights
+                  </label></div>
+                   <div class="radio" ><label >
+                  <input type="radio" name="" class="" value="week"> 1 nights
+                  </label></div>
+                  <div class="radio" ><label >
+                  <input type="radio" name="" class="" value="month"> 2 nights
+                  </label></div>
+                   <div class="radio" ><label >
+                  <input type="radio" name="" class="" value="month"> 3 nights
+                  </label></div>
+                   <div class="radio" ><label >
+                  <input type="radio" name="" class="" value="month"> +3 nights
+                  </label></div>
+                  <button type='button' onclick="nextQ(3)">Next</button>
+               </div>
+               
+               <div class="radio question" id="4" style="display:none;">
+                  <h3>The number of hours I work affects the amount of sleep I get</h3>
+                   <div class="radio" ><label  >
+                  <input type="radio" name="" class="" value="day"> Strongly Agree
+                  </label></div>
+                   <div class="radio" ><label >
+                  <input type="radio" name="" class="" value="week"> Agree
+                  </label></div>
+                   <div class="radio" ><label >
+                  <input type="radio" name="" class="" value="month"> Disagree
+                  </label></div>
+                   <div class="radio" ><label >
+                  <input type="radio" name="" class="" value="month"> Strongly Disagree
+                  </label></div>
+                  <button type='button' onclick="nextQ(4)">Next</button>
+               </div><br/>
+               <div class="question" id="5" style="display:none;">
+               <h3>How long have you had a problem with your sleep?</h3>
+               <select>
+
+                  <option value="Choose option">Choose option</option>
+                  <option value="I don't have a option">I don't have a option</option>
+                  <option value="less than one month">less than one month</option>
+                  <option value="1-2months">1-2months</option>
+                  <option value="3-6months">3-6months</option>
+                  <option value="7-12months">7-12months</option>
+                  <option value="1-2years">1-2years</option>
+                  <option value="3-5years">3-5years</option>
+                  <option value="6-10years">6-10years</option>
+                  <option value="11 or more years">11 or more years</option>
+               </select>
+               <button type='button' onclick="nextQ(5)">Next</button>
+               </div>
+              <div class="question" id="6" style="display:none;">
+                <button type="submit" class="button button-block" style="margin-top:10%;">Submit</button>
+              </div>
+            </form>
+         </div>
+         <!-- tab-content -->
+      </div>
+      <!-- /form -->
+
+{% endblock %}

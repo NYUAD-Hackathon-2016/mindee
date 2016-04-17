@@ -1,0 +1,44 @@
+{% extends "mindee/layout.html" %}
+{% block body %}
+
+      <div class="form">
+         <div class="tab-content">
+            <form action="/user" method="get">
+
+<h1 style="color:white;">Goal Duration</h1>
+<div id="time-option-container" align="center">
+  <label class="radio-inline" >
+    <input type="radio" name="time-option" class="time-option" value="day"> Day
+  </label>
+  <label class="radio-inline">
+    <input type="radio" name="time-option" class="time-option" value="week"> Week
+  </label>
+  <label class="radio-inline">
+    <input type="radio" name="time-option" class="time-option" value="month"> Month
+  </label>
+</div>
+
+<center height="40%">
+<div class="btn-group" data-toggle="buttons" id="howoften-option-container" style="margin-top:10%;" >
+  <label class="btn btn-primary active" id="opt1">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Once
+  </label>
+  <label class="btn btn-primary" id="opt2">
+    <input type="radio" name="options" id="option2" autocomplete="off"> Daily
+  </label>
+  <label class="btn btn-primary" id="opt3">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Weekly
+  </label>
+</div>
+</center>
+
+
+
+               <button type="submit" class="button button-block" style="margin-top:10%"/>Set Goal</button>
+            </form>
+         </div>
+         <!-- tab-content -->
+      </div>
+      <!-- /form -->
+
+{% endblock %}

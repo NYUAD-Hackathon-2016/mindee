@@ -1,0 +1,20 @@
+{% extends "mindee/layout.html" %}
+{% block body %}
+
+      <div class="form">
+         <div class="tab-content">
+            <h1>Sleep</h1>
+            <div style="text-align:center;margin-bottom: 5%;">
+               <form action="/survey"><input type="submit" value="Want to personalize your results ?"></form>
+            </div>
+            <img src="{{ url_for('static', filename='Exercise.png') }}" width="40%" style="margin-right: 5%;margin-left: 7%;"> 
+            <img src="{{ url_for('static', filename='GetMoreSunlight.png') }}" width="40%">
+            <img src="{{ url_for('static', filename='MakeYourBed.png') }}" width="40%" style="margin-right: 5%;margin-left: 7%;">
+            <a href="setgoal.html"><img src="{{ url_for('static', filename='EatLighterMeals.png') }}" width="40%"> </a>
+         </div>
+         <!-- tab-content -->
+      </div>
+      <!-- /form -->
+
+
+{% endblock %}
