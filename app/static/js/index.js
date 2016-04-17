@@ -69,7 +69,11 @@ $(document).ready(function() {
         $(target).fadeIn(600);
 
     });
-       /* alert(val)
+
+   /* alert(val)
+    
+
+
     var bar = new ProgressBar.Circle(sleep, {
         strokeWidth: 6,
         easing: 'easeInOut',
@@ -95,13 +99,14 @@ $(document).ready(function() {
         svgStyle: null,
 
 
-    });
+    }); 
 
-    bar.animate(0.9); // Number from 0.0 to 1.0
+    bar.animate(0.9); // Number from 0.0 to 1.0 */
 
-*/
+
 
     $()
+
 
 
 });
